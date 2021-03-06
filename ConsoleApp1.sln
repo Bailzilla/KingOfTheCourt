@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KingOfTheCourt", "ConsoleApp1\KingOfTheCourt.csproj", "{59D56D71-BAE7-4467-97E8-5D68693757B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59D56D71-BAE7-4467-97E8-5D68693757B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59D56D71-BAE7-4467-97E8-5D68693757B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59D56D71-BAE7-4467-97E8-5D68693757B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59D56D71-BAE7-4467-97E8-5D68693757B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4AA421DB-E06C-47A3-9DCD-4A194A1FC219}
+	EndGlobalSection
+EndGlobal
