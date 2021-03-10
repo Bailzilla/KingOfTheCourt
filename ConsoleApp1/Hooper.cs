@@ -39,14 +39,12 @@ namespace KingOfTheCourt
         {
             score++;
             attempts++;
-            Console.WriteLine($"{name} Attempt:{attempts}. Points:{score}");
         }
 
         public void missedShot()
         {
             attempts++;
             isTurn = false;
-            Console.WriteLine($"{name} Miss");
         }
     }
 }
