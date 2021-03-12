@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace KingOfTheCourt
 {
@@ -11,8 +12,10 @@ namespace KingOfTheCourt
         public bool isTurn = true;
         public int score = 0;
         public int attempts = 0;
+        public List<int> shootingPercentage = new List<int>();
 
- 
+
+
         public Hooper(string playerName)
         {
             name = playerName;
@@ -39,11 +42,13 @@ namespace KingOfTheCourt
         {
             score++;
             attempts++;
+            shootingPercentage.Add(1);
         }
 
         public void missedShot()
         {
             attempts++;
+            shootingPercentage.Add(0);
             isTurn = false;
         }
     }

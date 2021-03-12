@@ -22,7 +22,7 @@ namespace KingOfTheCourt
             var answer = "1";
             var result = "";
             var playByPlay = new List<string>();
-
+            
             while (answer == "1") {
 
                 Hooper player = new Hooper("Keith");
@@ -75,6 +75,11 @@ namespace KingOfTheCourt
                 {
                     result += $"{player2.name} wins by a score of {player2.score} to {player.score}!";
                 }
+
+                player.shootingPercentage.ForEach(Console.WriteLine);
+                double playerPercent = player.shootingPercentage.Average();
+                Console.WriteLine(playerPercent * 100);
+
                 Console.WriteLine(result);
                 result = "";
                 Console.WriteLine("Press 1 then hit enter to play again. Press anything else then enter to exit.");
