@@ -10,9 +10,7 @@ namespace KingOfTheCourt
         {
 
             // queue: 
-                // use a LINQ query to calculate scoring % for each player
-                    // var possessions = new List<int> { 1, 0, 1, 0 };
-                    // double scoringPercentage = possessions.Average();
+                // add an option for deeper stats at the post-game
                 // create a Shooter class that inherits from Hooper
                 // README
                 // give the player the choice to take a 1 or 2 point shot
@@ -23,11 +21,13 @@ namespace KingOfTheCourt
             var result = "";
             var playByPlay = new List<string>();
             
+            // allow player to play again by pressing 1
             while (answer == "1") {
 
                 Hooper player = new Hooper("Keith");
                 Hooper player2 = new Hooper("Anne");
 
+                // game loop
                 while (player.score < 12 && player2.score < 12)
                 {
                     if (player.isTurn)
@@ -65,6 +65,7 @@ namespace KingOfTheCourt
 
                 }
 
+                // post-game 
                 playByPlay.ForEach(Console.WriteLine);
 
                 if(player.score>player2.score)
@@ -76,12 +77,15 @@ namespace KingOfTheCourt
                     result += $"{player2.name} wins by a score of {player2.score} to {player.score}!";
                 }
 
-                player.shootingPercentage.ForEach(Console.WriteLine);
+                // player.shootingPercentage.ForEach(Console.WriteLine);
                 double playerPercent = player.shootingPercentage.Average();
-                Console.WriteLine(playerPercent * 100);
+                
 
                 Console.WriteLine(result);
                 result = "";
+
+                Console.WriteLine("Player 1's shooting percentage was " + playerPercent * 100 + "%.");
+
                 Console.WriteLine("Press 1 then hit enter to play again. Press anything else then enter to exit.");
                 answer = Console.ReadLine();
 
