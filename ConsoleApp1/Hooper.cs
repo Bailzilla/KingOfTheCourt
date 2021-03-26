@@ -8,14 +8,14 @@ namespace KingOfTheCourt
     class Hooper
     {
         public string name;
-        public int accuracy = 5;
+        public virtual int accuracy { get; set; } = 5;
+        
         public bool isTurn = true;
         public int score = 0;
         public int attempts = 0;
         public List<int> shootingPercentage = new List<int>();
 
-
-
+        public Hooper() { } 
         public Hooper(string playerName)
         {
             name = playerName;

@@ -11,7 +11,6 @@ namespace KingOfTheCourt
 
             // queue: 
                 // add an option for deeper stats at the post-game
-                // create a Shooter class that inherits from Hooper
                 // README
                 // give the player the choice to take a 1 or 2 point shot
                 // graph/graphic
@@ -22,10 +21,10 @@ namespace KingOfTheCourt
             var playByPlay = new List<string>();
             
             // allow player to play again by pressing 1
-            while (answer == "1") {
+            while (answer != "3") {
 
-                Hooper player = new Hooper("Keith");
-                Hooper player2 = new Hooper("Anne");
+                Hooper player = new Hooper("Keith"); 
+                Hooper player2 = new Shooter("Anne");
 
                 // game loop
                 while (player.score < 12 && player2.score < 12)
@@ -86,7 +85,9 @@ namespace KingOfTheCourt
 
                 Console.WriteLine("Player 1's shooting percentage was " + playerPercent * 100 + "%.");
 
-                Console.WriteLine("Press 1 then hit enter to play again. Press anything else then enter to exit.");
+                Console.WriteLine("Press 1 then enter to play again");
+                Console.WriteLine("Press 2 then enter to see the play-by-play");
+                Console.WriteLine("Press 3 then enter to exit.");
                 answer = Console.ReadLine();
 
             }
