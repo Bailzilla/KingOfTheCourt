@@ -51,7 +51,6 @@ namespace KingOfTheCourt
                         {
                             player2.madeShot();
                             playByPlay.Add($"{player2.name} Attempt:{player2.attempts}. Points:{player2.score}");
-
                         }
                         else
                         {
@@ -67,7 +66,10 @@ namespace KingOfTheCourt
                 // post-game 
                 playByPlay.ForEach(Console.WriteLine);
 
-                if(player.score>player2.score)
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.BackgroundColor = ConsoleColor.DarkYellow;
+
+                if (player.score>player2.score)
                 {
                     result += $"{player.name} wins by a score of {player.score} to {player2.score}!";
                 }
@@ -82,6 +84,8 @@ namespace KingOfTheCourt
 
                 Console.WriteLine(result);
                 result = "";
+
+                Console.ResetColor();
 
                 Console.WriteLine("Player 1's shooting percentage was " + playerPercent * 100 + "%.");
 
