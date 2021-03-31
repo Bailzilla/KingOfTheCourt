@@ -8,7 +8,7 @@ namespace KingOfTheCourt
     {
    
 
-        public override int accuracy { get; set; } = 8;
+        public override int accuracy { get; set; } = 7;
 
         public Shooter(string playerName)
         {
